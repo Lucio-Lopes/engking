@@ -76,6 +76,12 @@ header #close{
     cursor: pointer;
 }
 
+header #close span{
+
+    font-size: 2rem;
+
+}
+
 main{
     margin-top: 5rem;
     height: 20rem;
@@ -381,7 +387,7 @@ header .close{
     header .header{
 
         justify-content: space-between;
-        
+        padding: 0 1rem;
     }
     header .header nav{
 
@@ -391,9 +397,14 @@ header .close{
     header  #menu{
 
         display: block;
-        
     }
     
+    header #menu span{
+
+        font-size: 2rem;
+
+    }
+
     .img-main{
 
         display: none;
@@ -425,14 +436,11 @@ header .close{
 
     }  
     section .linha2{
-
         flex-direction: column;
         gap: 3rem;
     }
     body{
-
         overflow-x: hidden;
-        
     }
     article .perigo{
 
@@ -468,7 +476,8 @@ header .close{
 
         display: flex;
         flex-direction:row-reverse;
-        gap: 1rem;
+        gap: 0.5rem;
+        font-size: 11px;
     }
     #nav-menu{
         width:100%;
@@ -477,7 +486,7 @@ header .close{
         display: none;
         position: absolute;
         margin-top: 17.25rem;
-       
+        left: 0;
 		animation: showMenu 400ms ease forwards;
         box-shadow: 3px 3px 3px black;
     }
@@ -526,4 +535,9 @@ header .close{
 			transform:translateY(0);
 		}
 	}
+    .dev{
+
+        font-size: 11px;
+
+    }
 } 
