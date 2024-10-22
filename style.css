@@ -1,0 +1,529 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color:#f6f6f9;
+    font-family: poppins,roboto,sans-serif;
+    align-items: center;
+    width:100%;
+    user-select: none;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: steelblue;
+    border-bottom: 1px solid white;
+    height: 5rem;
+}
+
+.logo{
+
+    color: orange;
+
+}
+
+.header nav ul{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.header nav ul li a{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.header nav ul li a span{
+
+    margin-bottom: 0.3rem;
+
+}
+header #close{
+
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+main{
+    margin-top: 5rem;
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.calculadora{
+
+    width: 40rem;
+    text-align: start;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.calculadora h5{
+
+    color: gray;
+
+}
+
+.btn-calc{
+
+    font-size: 14px;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color:#FF8C00;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0.2rem 0.2rem 0.2rem gray;
+}
+.btn-calc:hover{
+
+    background-color: 	#db7900;
+    color: white;
+
+}
+
+.botoes{
+
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.btn-contato{
+    border: none;
+    background-color: #32CD32;
+    color: white;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0.2rem 0.2rem 0.2rem gray;
+}
+
+.btn-contato a{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.btn-contato a img{
+
+    width: 2rem;
+    height: auto;
+
+}
+
+.btn-contato:hover{
+
+    background-color: #35a735;
+
+}
+
+.img-main img{
+
+    width: 30rem;
+
+}
+
+section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: steelblue;
+    gap: 2rem;
+    color: white;
+    width: 100%;
+    padding: 2rem;
+    height: auto;
+}
+
+.linha1{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha1 > div{
+
+    width: 23rem;
+    height: 15rem;
+    background-color: #045389;
+    color: black;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgb(32, 32, 32);
+    
+}
+
+.linha1 > div h3{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.linha1 > div p{
+    margin-top: 1rem;
+    color: rgb(219, 219, 219);
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+.linha1 > div h3 span{
+
+    font-size: 35px;
+
+}
+
+.linha2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+.linha2 > div{
+
+    width: 23rem;
+    height: 15rem;
+    background-color: #045389;
+    color: black;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgb(32, 32, 32);
+
+}
+.linha2 > div h3{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.linha2 > div p{
+    margin-top: 1rem;
+    color: rgb(219, 219, 219);
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+.linha2 > div h3 span{
+
+    font-size: 35px;
+
+}
+
+footer{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 4rem;
+    background-color: steelblue;
+    color: white;
+    font-weight: 300;
+    padding: 2rem;
+    font-size: 12px;
+    width: 100%;
+}
+
+article{
+
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+article .perigo{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+article h2{
+
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.texto-perigo{
+
+    width: 30rem;
+    color: rgb(223, 0, 0);
+}
+
+.texto-perigo h1{
+
+    font-size: 2em;
+
+}
+
+.depoimentos{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    gap: 2rem;
+}
+
+.depoimentos > div{
+
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 1rem;
+}
+
+.depoimentos > div p{
+
+    color: gray;
+
+}
+
+.depoimentos > div span{
+
+    font-size: 3em;
+
+}
+header  #menu{
+
+    display:none;
+    color: white;
+    font-size: 2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+header .close{
+
+    display: none;
+
+}
+
+
+@media (max-width:768px){
+    header .header{
+
+        justify-content: space-between;
+        
+    }
+    header .header nav{
+
+        display: none;
+
+    }
+    header  #menu{
+
+        display: block;
+        
+    }
+    
+    .img-main{
+
+        display: none;
+
+    }
+    .calculadora{
+        width: 100%;
+        align-items: center;
+    }
+    .calculadora h1{
+
+        font-size: 1.3em;
+
+    }
+    .calculadora h5{
+
+        font-size: 0.7em;
+        text-align: justify;
+    }
+    section{
+
+        gap: 3rem;
+
+    }
+    section .linha1{
+
+        flex-direction: column;
+        gap: 3rem;
+
+    }  
+    section .linha2{
+
+        flex-direction: column;
+        gap: 3rem;
+    }
+    body{
+
+        overflow-x: hidden;
+        
+    }
+    article .perigo{
+
+        flex-direction:column-reverse;
+        width: 100%!important;
+    }
+    article .perigo .texto-perigo{
+
+        text-align: center;
+
+    }
+    article .depoimentos{
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+    article .depoimentos > div{
+
+        width: 100%;
+        border-top: 0.3rem solid steelblue;
+        padding-top: 1rem;
+    }
+
+    footer{
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    footer .footer-copy{
+
+        display: flex;
+        flex-direction:row-reverse;
+        gap: 1rem;
+    }
+    #nav-menu{
+        width:100%;
+        background-color: steelblue;
+        height: max-content;
+        display: none;
+        position: absolute;
+        margin-top: 17.25rem;
+       
+		animation: showMenu 400ms ease forwards;
+        box-shadow: 3px 3px 3px black;
+    }
+    #nav-menu ul{
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+    }
+    #nav-menu ul li a{
+
+        padding: 1rem;
+        
+    }
+    
+    #nav-menu ul li a span{
+
+        display: none;
+
+    }
+    .calculadora{
+
+        padding: 1rem;
+    }
+
+    article .perigo{
+
+        align-items: center;
+        
+    }
+    .texto-perigo{
+
+        width: 23rem;
+
+    }
+    .perigo img{
+
+        width: 23rem;
+
+    }
+	@keyframes showMenu{
+		from{
+			transform: translateY(-100%);
+		}
+		to{
+			transform:translateY(0);
+		}
+	}
+} 
