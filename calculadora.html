@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" type="image/x-icon" href="./img/logo.ico">
+    <title>Calculadora de BTUs</title>
+</head>
+    <body>
+        <header>
+            <div class="header">
+                <h1><span class="logo">ENG</span>KING</h1>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="./index.html"><span class="material-symbols-outlined">
+                            home
+                            </span>INÍCIO</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined">
+                            settings
+                            </span>SERVIÇO</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined">
+                            contact_phone
+                            </span>CONTATO</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined">
+                            info
+                            </span>SOBRE</a></li>
+                    </ul>
+                </nav>
+                <button id="menu"><span class="material-symbols-outlined menu">menu</span></button>
+                <button id="close"><span class="material-symbols-outlined">close</span></button>
+            </div>
+        </header>
+        <main class="l-m cf">
+            
+            <div class="img-logo">
+
+                <img src="./img/engking_reformado_sem_refrigeracao.png" alt="">
+
+            </div>
+
+
+
+
+
+
+
+<section class="s s-basic cf sc-w   wnd-w-default wnd-s-normal wnd-h-auto">
+	<div class="s-cd cf">
+		<div class="s-o s-fs cf">
+			<div class="s-bg cf">
+				<div class="s-bg-l">
+                    
+					
+				</div>
+			</div>
+			<div class="s-c s-fs cf">
+				<div class="ez cf wnd-no-cols">
+	<div class="ez-c"><div class="b b-text cf">
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf">
+
+
+ <div class="calculator">
+        <h2>Calculadora de BTUs</h2>
+        <div class="form-group">
+            <label for="area">Área (m²) ou Volume (m³):</label>
+            <input type="text" id="area" placeholder="Informe a área em metros quadrados ou o volume em metros cúbicos">
+            <select id="area-type">
+                <option value="m2">Área (m²)</option>
+                <option value="m3">Volume (m³)</option>
+            </select>
+            <small>Se souber o volume, é mais preciso para o cálculo.</small>
+        </div>
+
+
+
+<div class="form-group">
+    <label for="pessoas">Número de Pessoas:</label>
+    <select id="pessoas" onchange="verificarOpcaoOutro()">
+        <option value="0">Selecione...</option>
+        <option value="1">1 pessoa</option>
+        <option value="2">2 pessoas</option>
+        <option value="3">3 pessoas</option>
+        <option value="4">4 pessoas</option>
+        <option value="5">5 pessoas</option>
+        <option value="6">6 pessoas</option>
+        <option value="7">7 pessoas</option>
+        <option value="8">8 pessoas</option>
+        <option value="9">9 pessoas</option>
+        <option value="10">10 pessoas</option>
+        <option value="outros">Mais...</option>
+    </select>
+    <input type="text" id="outrosInput" style="display: none; margin-top: 10px;" placeholder="Insira o número de pessoas" oninput="validarOutrosInput()">
+    <small>Média para uma pessoa adulta com em média de 80kg.</small>
+</div>
+
+
+<script>
+function verificarOpcaoOutro() {
+    var select = document.getElementById("pessoas");
+    var outrosInput = document.getElementById("outrosInput");
+    if (select.value === "outros") {
+        outrosInput.style.display = "block";
+    } else {
+        outrosInput.style.display = "none";
+        outrosInput.value = "";
+    }
+}
+
+
+function validarOutrosInput() {
+    var outrosInput = document.getElementById("outrosInput");
+    var value = outrosInput.value;
+    if (!/^\d+$/.test(value)) {
+        outrosInput.value = value.slice(0, -1);
+    }
+}
+
+
+function obterNumeroDePessoas() {
+    var select = document.getElementById("pessoas");
+    var outrosInput = document.getElementById("outrosInput");
+
+    if (select.value === "outros") {
+        return parseInt(outrosInput.value) || 0;
+    } else {
+        return parseInt(select.value);
+    }
+}
+</script>
+
+
+        <div class="form-group">
+            <label for="aberturas">Quantidade de Aberturas (Portas e Janelas):</label>
+            <select id="aberturas">
+                <option value="0">Selecione...</option>
+                <option value="1">1 abertura</option>
+                <option value="2">2 aberturas</option>
+                <option value="3">3 aberturas</option>
+                <option value="4">4 aberturas</option>
+                <option value="5">5 aberturas</option>
+                <option value="6">6 aberturas</option>
+                <option value="7">7 aberturas</option>
+                <option value="8">8 aberturas</option>
+                <option value="9">9 aberturas</option>
+                <option value="10">10 aberturas</option>
+                <option value="11">11 aberturas</option>
+                <option value="12">12 aberturas</option>
+                <option value="13">13 aberturas</option>
+                <option value="14">14 aberturas</option>
+                <option value="15">15 aberturas</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label>Recebe sol direto
+                <input type="checkbox" id="lado-sol" class="toggle-checkbox">
+            </label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="selected-appliances">Aparelhos eletrônicos:</label>
+            <div id="appliance-dropdown-container">
+                <input type="text" id="selected-appliances" placeholder="Selecione..." readonly>
+<div id="selected-appliances-dropdown">
+<button onclick="adicionarAparelho('computador')">Computador<span class="add-button">+</span></button>
+<button onclick="adicionarAparelho('televisao')">Televisão<span class="add-button">+</span></button>
+<button onclick="adicionarAparelho('ventilador')">Ventilador<span class="add-button">+</span></button>
+<button onclick="adicionarAparelho('som')">Som<span class="add-button">+</span></button>
+<button onclick="adicionarAparelho('geladeira')">Geladeira<span class="add-button">+</span></button>
+<button onclick="adicionarAparelho('outro')">Outros<span class="add-button">+</span></button>
+</div>
+</div>
+</div>
+
+
+<div class="selected-appliances">
+<h3>Aparelhos Selecionados:</h3>
+<ul id="aparelhos-list"></ul>
+</div>
+<div class="form-group">
+<button class="calcular-button" onclick="calcularBTU()">Calcular BTUs</button>
+</div>
+<div class="result" id="resultado"></div>
+</div>
+
+
+<script>
+    let aparelhosSelecionados = [];
+
+    document.getElementById('selected-appliances').addEventListener('focus', function() {
+        document.getElementById('selected-appliances-dropdown').style.display = 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        let dropdown = document.getElementById('selected-appliances-dropdown');
+        if (!dropdown.contains(event.target) && event.target.id !== 'selected-appliances') {
+            dropdown.style.display = 'none';
+        }
+    });
+
+    function adicionarAparelho(tipo) {
+        let aparelho;
+        switch (tipo) {
+            case 'computador':
+                aparelho = { nome: 'Computador', btu: 350 };
+                break;
+            case 'televisao':
+                aparelho = { nome: 'Televisão', btu: 200 };
+                break;
+            case 'ventilador':
+                aparelho = { nome: 'Ventilador', btu: 50 };
+                break;
+            case 'som':
+                aparelho = { nome: 'Som', btu: 100 };
+                break;
+            case 'geladeira':
+                aparelho = { nome: 'Geladeira', btu: 450 };
+                break;
+            case 'outro':
+                aparelho = { nome: 'Outros', btu: 150 };
+                break;
+        }
+        aparelhosSelecionados.push(aparelho);
+        atualizarListaAparelhos();
+    }
+
+    function removerAparelho(index) {
+        aparelhosSelecionados.splice(index, 1);
+        atualizarListaAparelhos();
+    }
+
+    function atualizarListaAparelhos() {
+        let listaAparelhos = document.getElementById('aparelhos-list');
+        listaAparelhos.innerHTML = '';
+        aparelhosSelecionados.forEach((aparelho, index) => {
+            let listItem = document.createElement('li');
+            listItem.textContent = `${aparelho.nome}`;
+
+            let removeButton = document.createElement('button');
+            removeButton.textContent = '×';
+            removeButton.className = 'remove-appliance';
+            removeButton.onclick = function() {
+                removerAparelho(index);
+            };
+            listItem.appendChild(removeButton);
+
+            listaAparelhos.appendChild(listItem);
+        });
+
+        if (aparelhosSelecionados.length > 0) {
+            document.querySelector('.selected-appliances').style.display = 'block';
+        } else {
+            document.querySelector('.selected-appliances').style.display = 'none';
+        }
+    }
+
+
+
+function calcularBTU() {
+    let areaInput = document.getElementById('area').value.trim().replace(',', '.');
+    let areaType = document.getElementById('area-type').value;
+
+    // Verificar se a entrada de área é válida
+    let area = parseFloat(areaInput);
+    if (isNaN(area) || area <= 0) {
+        document.getElementById('resultado').innerHTML = 'Erro na área ou volume';
+        return;
+    }
+
+    // Obter número de pessoas e aberturas usando obterNumeroDePessoas
+    let pessoas = obterNumeroDePessoas();
+    let aberturas = parseInt(document.getElementById('aberturas').value);
+    let ladoSol = document.getElementById('lado-sol').checked;
+
+    // Calcular BTU da área
+    let btuArea = 0;
+    if (areaType === 'm2') {
+        btuArea = area * 600;
+    } else if (areaType === 'm3') {
+        btuArea = area * 240; // Convertendo m³ para m² equivalente e calculando BTU
+    }
+
+    // Calcular BTU das pessoas, aberturas e ladoSol
+    let btuPessoas = pessoas > 0 ? pessoas * 600 : 0;
+    let btuAberturas = aberturas > 0 ? aberturas * 200 : 0;
+    let btuLadoSol = ladoSol ? 550 : 0;
+
+    // Calcular BTU dos aparelhos selecionados (supondo que 'aparelhosSelecionados' esteja definido)
+    let btuAparelhos = 0;
+    aparelhosSelecionados.forEach(aparelho => {
+        btuAparelhos += aparelho.btu;
+    });
+
+    // Calcular BTU total
+    let btuTotal = btuArea + btuPessoas + btuAberturas + btuLadoSol + btuAparelhos;
+
+    // Exibir resultado
+    document.getElementById('resultado').innerHTML = `Resultado: ${btuTotal} BTUs`;
+}
+</script>
+
+
+
+<script>
+    let aparelhosSelecionados = [];
+
+    document.getElementById('selected-appliances').addEventListener('focus', function() {
+        document.getElementById('selected-appliances-dropdown').style.display = 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        let dropdown = document.getElementById('selected-appliances-dropdown');
+        if (!dropdown.contains(event.target) && event.target.id !== 'selected-appliances') {
+            dropdown.style.display = 'none';
+        }
+    });
+
+    function removerAparelho(index) {
+        aparelhosSelecionados.splice(index, 1);
+        atualizarListaAparelhos();
+    }
+
+    function atualizarListaAparelhos() {
+        let listaAparelhos = document.getElementById('aparelhos-list');
+        listaAparelhos.innerHTML = '';
+        aparelhosSelecionados.forEach((aparelho, index) => {
+            let listItem = document.createElement('li');
+            listItem.textContent = `${aparelho.nome}`;
+
+            let removeButton = document.createElement('button');
+            removeButton.textContent = '×';
+            removeButton.className = 'remove-appliance';
+            removeButton.onclick = function() {
+                removerAparelho(index);
+            };
+            listItem.appendChild(removeButton);
+
+            listaAparelhos.appendChild(listItem);
+        });
+
+        if (aparelhosSelecionados.length > 0) {
+            document.querySelector('.selected-appliances').style.display = 'block';
+        } else {
+            document.querySelector('.selected-appliances').style.display = 'none';
+        }
+    }
+
+</script>
+</div>
+</div></div>
+</div>
+			</div>
+		</div>
+	</div>
+    <footer>
+        <div class="footer-copy">
+            <p>&copy; Todos os direitos reservados 2024 | EngKing Serviços</p>
+        </div>
+        <div class="dev">
+            <p>Desenvolvido por EngKing - Fortaleza/CE</p>
+        </div>
+    </footer>
+    <script src="./script.js" type="text/javascript"></script>
+        </body>
+</html>

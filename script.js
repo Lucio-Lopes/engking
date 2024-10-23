@@ -12,5 +12,6 @@ closeBtn.addEventListener('click', () =>{
 	sideMenu.style.display = "none";
 	menuBtn.style.display = "block";
 	closeBtn.style.display="none";
+	sideMenu.classList.add("close-animation");
 });
 	
